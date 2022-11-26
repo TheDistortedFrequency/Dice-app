@@ -8,11 +8,11 @@ void main() {
         primarySwatch: Colors.red,
       ),
       home: Scaffold(
-        backgroundColor: const Color(0xff009E60),
+        backgroundColor: const Color.fromARGB(197, 255, 240, 79),
         appBar: AppBar(
           elevation: 4,
           title: const Text('Dicee'),
-          backgroundColor: const Color(0xff009E60),
+          backgroundColor: const Color.fromARGB(197, 255, 240, 79),
         ),
         body: const DicePage(),
       ),
@@ -20,6 +20,7 @@ void main() {
   );
 }
 
+// here written all code of dice app.
 class DicePage extends StatefulWidget {
   const DicePage({Key? key}) : super(key: key);
 
@@ -34,6 +35,7 @@ class _DicePageState extends State<DicePage> {
 
   void dicechange() {
     setState(() {
+      // this is the function of maths package. and + 1 is for removing zero number.
       leftdice = Random().nextInt(6) + 1;
       rightdice = Random().nextInt(6) + 1;
       num++;
